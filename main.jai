@@ -428,7 +428,6 @@ main :: () {
 
     rl.InitWindow(W * 10, H * 10, "CHIP-8");
     rl.SetTargetFPS(TARGET_FPS);
-    rl.SetTraceLogLevel(.LOG_NONE); // nocheckin.
 
     rl.InitAudioDevice();
 
