@@ -396,6 +396,12 @@ step :: (ctx: *Chip8) {
 
 }
 
+load_program :: (program: []u8, ctx: *Chip8) {
+    for program {
+        ctx.mem[it_index + 0x200] = it;
+    }
+}
+
 main :: () {
     ctx: Chip8;
 
@@ -416,10 +422,7 @@ main :: () {
         exit(1);
     }
 
-    // Load the program.
-    for program {
-        ctx.mem[it_index + 0x200] = it;
-    }
+    load_program(program, *ctx);
 
     rl.InitWindow(ctx.W * 10, ctx.H * 10, "CHIP-8");
     rl.SetTargetFPS(ctx.TARGET_FPS);
