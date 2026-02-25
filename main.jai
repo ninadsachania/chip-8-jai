@@ -4,15 +4,6 @@
 
 rl :: #import "raylib";
 
-//
-// References:
-//
-// https://en.wikipedia.org/wiki/CHIP-8
-// https://tobiasvl.github.io/blog/write-a-chip-8-emulator/
-// http://devernay.free.fr/hacks/chip8/C8TECH10.HTM
-// https://github.com/Timendus/chip8-test-suite
-//
-
 TARGET_FPS :: 60;
 INSTRUCTION_PER_SECOND :: 600;
 INSTRUCTIONS_PER_FRAME :: INSTRUCTION_PER_SECOND / TARGET_FPS;
